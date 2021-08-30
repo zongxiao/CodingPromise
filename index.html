@@ -13,6 +13,9 @@
       // resolve('ok');
       // reject('warn');
       // throw 'error';
+      setTimeout(() => {
+        reject('ok');
+      }, 3000);
     });
 
     // console.log(p);
@@ -20,6 +23,11 @@
       console.log(value);
     }, reason => {
       console.warn(reason)
+    })
+    p.then(value => {
+      console.log(value + '2');
+    }, reason => {
+      console.warn(reason + '2');
     })
 
     
