@@ -9,28 +9,8 @@
 </head>
 <body>
   <script>
-    const p = new Promise((resolve, reject) => {
-      // resolve('ok');
-      // reject('warn');
-      // throw 'error';
-      setTimeout(() => {
-        reject('ok');
-      }, 3000);
-    });
-
-    // console.log(p);
-    p.then(value => {
-      console.log(value);
-    }, reason => {
-      console.warn(reason)
-    })
-    p.then(value => {
-      console.log(value + '2');
-    }, reason => {
-      console.warn(reason + '2');
-    })
-
-    
+    const p = Promise.resolve(Promise.resolve('asdad'));
+    console.log(p);
   </script>
 </body>
 </html>
